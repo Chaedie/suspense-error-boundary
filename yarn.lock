@@ -532,6 +532,11 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.24.0.tgz#0574d7e87b44ee8511d08cc7f914bcb802b70818"
   integrity sha512-fbMkAF7fufku0N2dE5TBXcNlg0pt0cJue4xBRE2Qc5Vqikxr4VCgKj/ht6SMdFcOacVA9rqF70APJ8RN/4vMJw==
 
+"@suspensive/react@^2.18.0":
+  version "2.18.0"
+  resolved "https://registry.yarnpkg.com/@suspensive/react/-/react-2.18.0.tgz#5db518747ac2baebff23a6a31990ce81b54483a1"
+  integrity sha512-MYnLY2CP84boHqH5c1dQ/Ka4Y4fQ3fkbz4S1/jP8T86wTBMLCNhb98Pz/YmKEBLsN502VhAkwjGPLqN6eageFQ==
+
 "@tanstack/query-core@4.36.1":
   version "4.36.1"
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.36.1.tgz#79f8c1a539d47c83104210be2388813a7af2e524"
