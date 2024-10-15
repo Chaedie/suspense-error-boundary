@@ -5,7 +5,11 @@ import {
   QueryClientProvider,
   useQuery,
 } from "@tanstack/react-query";
-import { ErrorBoundary } from "@suspensive/react";
+import {
+  ErrorBoundary,
+  ErrorBoundaryFallbackProps,
+  ErrorBoundaryProps,
+} from "@suspensive/react";
 
 const queryClient = new QueryClient({ defaultOptions: {} });
 
@@ -20,21 +24,30 @@ function App() {
 function Page() {
   return (
     <div className="flex flex-col">
-      <ErrorBoundary fallback={<div>error...1</div>}>
+      <ErrorBoundary fallback={ErrorSection}>
         <Suspense fallback={<div>waiting 100...</div>}>
           <Component wait={100} error />
         </Suspense>
       </ErrorBoundary>
-      <ErrorBoundary fallback={<div>error...2</div>}>
+      <ErrorBoundary fallback={ErrorSection}>
         <Suspense fallback={<div>waiting 500...</div>}>
           <Component wait={500} />
         </Suspense>
       </ErrorBoundary>
-      <ErrorBoundary fallback={<div>error...3</div>}>
+      <ErrorBoundary fallback={ErrorSection}>
         <Suspense fallback={<div>waiting 1000...</div>}>
           <Component wait={1000} />
         </Suspense>
       </ErrorBoundary>
+    </div>
+  );
+}
+
+function ErrorSection(props: ErrorBoundaryFallbackProps) {
+  return (
+    <div>
+      error...2
+      <button onClick={props.reset}>리셋</button>
     </div>
   );
 }
